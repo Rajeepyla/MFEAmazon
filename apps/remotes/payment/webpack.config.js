@@ -32,7 +32,8 @@ module.exports = {
         name: "payment",
         filename: "remoteEntry.js",
         exposes: {
-            './Component': './apps/remotes/payment/src/app/app.component.ts',
+            './Component': './apps/remotes/payment/src/app/paymentpage/paymentpage.module.ts',
+          
         },
 
         // For hosts (please adjust)

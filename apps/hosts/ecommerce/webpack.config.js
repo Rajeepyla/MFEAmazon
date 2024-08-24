@@ -37,11 +37,12 @@ module.exports = {
 
         // For hosts (please adjust)
         remotes: {
+          // "ecommerce":"http://localhost:4201/remoteEntry.js",
             "profile": "http://localhost:4202/remoteEntry.js",
             "products":"http://localhost:4203/remoteEntry.js",
-            "products":"http://localhost:4203/remoteEntry.js",
-            "products":"http://localhost:4203/remoteEntry.js",
-            "products":"http://localhost:4203/remoteEntry.js",
+            "order":"http://localhost:4204/remoteEntry.js",
+            "home":"http://localhost:4205/remoteEntry.js",
+            "payment":"http://localhost:4206/remoteEntry.js",
 
         },
 
