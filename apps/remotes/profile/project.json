@@ -27,9 +27,11 @@
           }
         ],
         "styles": [
-          "apps/remotes/profile/src/styles.css"
+          "apps/remotes/profile/src/styles.css",
+          "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
         ],
-        "scripts": [],
+        "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
         "customWebpackConfig": {
           "path": "apps/remotes/profile/webpack.config.js"
         },

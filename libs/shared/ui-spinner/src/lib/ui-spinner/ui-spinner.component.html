@@ -1,0 +1,10 @@
+<div class="spinner-border" role="status" 
+[ngClass]="{'text-primary':type === 'primary',
+    'text-secondary':type === 'secondary',
+    'text-danger':type === 'danger',
+    'spinner-grow-sm': size === 'small',
+    'spinner-grow-md': size === 'medium',
+    'spinner-grow-lg': size === 'large'}">
+
+    <span class="visually-hidden">Loading...</span>
+</div>
