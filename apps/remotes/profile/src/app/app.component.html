@@ -1,8 +1,17 @@
-<!-- <profile-nx-welcome></profile-nx-welcome> <router-outlet></router-outlet> -->
 <div class="container">
-     <!-- <lib-ui-spinner [type]="'danger'" [size]="'large'"></lib-ui-spinner> -->
- 
-     <lib-ui-card [Title]="title" [Content]="content" [type]="'secondary'"></lib-ui-card>
-
+     <div class="card" style="width: 18rem;">
+          <lib-ui-card>
+               <ng-template #header>
+                    <lib-ui-card-header>Special title treatment</lib-ui-card-header>
+               </ng-template>
+               <ng-template #body>
+                    <lib-ui-card-body>With supporting text below as a natural lead-in to additional
+                         content.</lib-ui-card-body>
+               </ng-template>
+               <ng-template #footer>
+                    <lib-ui-card-footer> <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </lib-ui-card-footer>
+               </ng-template>
+          </lib-ui-card>
+     </div>
 </div>
-

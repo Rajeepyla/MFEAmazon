@@ -1,22 +1,34 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/core';
+import { UiCardFooterComponent } from '../ui-card-footer/ui-card-footer.component';
+import { UiCardBodyComponent } from '../ui-card-body/ui-card-body.component';
+import { UiCardHeaderComponent } from '../ui-card-header/ui-card-header.component';
 
 @Component({
   selector: 'lib-ui-card',
   templateUrl: './ui-card.component.html',
-  styleUrl: './ui-card.component.css',
+  styleUrls: ['./ui-card.component.css'], // Fixed styleUrl to styleUrls
 })
-export class UiCardComponent implements OnChanges {
- 
-  @Input() Title!:string;
-  @Input() Content!:string;
-  @Input() type!: string;
+export class UiCardComponent implements OnInit, AfterViewInit {
 
-  constructor(){
-    console.log(this.type)
+  // @Input() title!: string;
+  // @Input() content!: string;
+  // @Input() type!: string;
+
+  @ContentChild('header', { static: true }) header!: TemplateRef<UiCardHeaderComponent>;
+  @ContentChild('body', { static: true }) body!: TemplateRef<UiCardBodyComponent>;
+  @ContentChild('footer', { static: true }) footer!: TemplateRef<UiCardFooterComponent>;
+
+  
+
+
+
+  ngAfterViewInit(): void {
+
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes['type'].currentValue)
+  ngOnInit(): void {
+
   }
 }
+
 

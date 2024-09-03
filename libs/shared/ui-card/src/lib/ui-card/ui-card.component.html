@@ -1,5 +1,4 @@
-<div class="card" style="width: 18rem;">
-  <!-- <img src="..." class="card-img-top" alt="..."> -->
+<!-- <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">{{Title}}</h5>
     <p class="card-text">{{Content}}</p>
@@ -7,19 +6,23 @@
       'btn': true,  
       'btn-warning': type === 'warning',
       'btn-secondary': type === 'secondary',
-      'btn-danger': type === 'danger'
-    }">Go somewhere</a>
+      'btn-danger': type === 'danger' }">Go somewhere</a>
 
+  </div>
+</div> -->
+
+<div class="card text-center">
+  <div class="card-header">
+    <ng-container [ngTemplateOutlet]="header ? header: noData"></ng-container>
+  </div>
+  <div class="card-body">
+    <ng-container [ngTemplateOutlet]="body"></ng-container>
+  </div>
+  <div class="card-footer">
+    <ng-container [ngTemplateOutlet]="footer"></ng-container>
   </div>
 </div>
 
-<!-- 
-<div class="spinner-border" role="status" [ngClass]="{'text-primary':type === 'primary',
-    'text-secondary':type === 'secondary',
-    'text-danger':type === 'danger',
-    'spinner-grow-sm': size === 'small',
-    'spinner-grow-md': size === 'medium',
-    'spinner-grow-lg': size === 'large'}">
-
-  <span class="visually-hidden">Loading...</span>
-</div> -->
+<ng-template #noData>
+  <p> No data to display</p>
+</ng-template>
