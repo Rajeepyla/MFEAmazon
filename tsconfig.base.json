@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "component-base-ui-card": ["libs/shared/ui-card/src/index.ts"],
-      "component-base-ui-spinner": ["libs/shared/ui-spinner/src/index.ts"]
+      "component-base-ui-spinner": ["libs/shared/ui-spinner/src/index.ts"],
+      "component-base-ui-toast": ["libs/shared/ui-toast/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
